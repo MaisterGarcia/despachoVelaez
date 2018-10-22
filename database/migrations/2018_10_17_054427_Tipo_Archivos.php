@@ -14,7 +14,7 @@ class TipoArchivos extends Migration
     {
         Schema::create('Tipo_Archivos', function(Blueprint $table){
             $table->increments('id_TipoArchivo');
-            $table->string('NomTipoArchivo',200)->nullable(false)->change();
+            $table->string('NomArchivo',255)->nullable(false)->changue();
             $table->rememberToken();
             $table->timestamps();
         }); 
