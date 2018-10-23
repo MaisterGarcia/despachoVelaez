@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Registra Tarea</title>
+	<title>Registra Tareaa</title>
 </head>
 <body>
 	<h1 align="center">Registrar Tarea</h1>
