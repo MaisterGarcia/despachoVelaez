@@ -14,9 +14,9 @@ class Tareas extends Migration
     {
         Schema::create('Tareas', function(Blueprint $table){
             $table->increments('id_Tarea');
-            $table->string('NomTarea',200)->nullable(false)->change();
-            $table->date('FechaLimite')->nullable(false)->change();
-            $table->date('FechaFin')->nullable(false)->change();
+            $table->string('NomTarea',200)->nullable(false)->changue();
+            $table->date('FechaLimite')->nullable(false)->changue();
+            $table->date('FechaFin')->nullable(false)->changue();
             $table->string('num_folio');
             $table->foreign('num_folio')->references('num_folio')->on('Abogados');
             $table->integer('id_EstTar')->unsigned();
