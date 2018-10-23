@@ -1,0 +1,100 @@
+/*body{
+background-color: #FBFCFC;
+}
+
+h1{ 
+	color:#FBFCFC;
+	 background-color: black; 
+	 width: 1368px;
+	 height: 50px;
+
+}
+h2{
+	color: #FBFCFC;
+}
+
+a{
+	color:#FBFCFC;;
+	font-size:20px;
+	margin-left: 10px;
+}
+
+.refs{
+	background: orange;
+	width: 1368px;
+	height: 50px;
+}
+
+.menus{
+	color:#FBFCFC;
+	background: green;
+	width: 150px; 
+	height: 1368px;
+	margin:0px;
+	padding:0px; 
+}*/
+
+
+#app{
+	position: absolute;
+	height: 100%;
+	width:100%;
+}
+#app a{
+	color: #fff!important;
+}
+#app input{
+	margin-bottom: 10px;
+}
+
+
+/*HEADER*/
+#app header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30px;
+	height: 100px;
+	width: 100%;
+	background: #444;
+	position: fixed;
+	color: white;
+}
+#app header nav a{
+	margin-left: 5px;
+}
+
+
+/*ASEIDE*/
+#app aside{
+	position: fixed;
+	width: 200px;
+	height: calc(100% - 100px);
+	background: orange;
+	bottom: 0;
+}
+#app aside a{
+
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	height: 40px;
+	width: 100%;
+	text-decoration: none;
+	border-bottom: 1px solid #777;
+}
+
+/*BODY*/
+#app #body{
+	position: absolute;
+	padding: 50px;
+	background: #fff;
+	width: calc(100% - 200px);
+	height: calc(100% - 100px);
+	bottom: 0;
+	right: 0;
+}
+
+#app aside a:hover {
+  background-color: gold;
+}
