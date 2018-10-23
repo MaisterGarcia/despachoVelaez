@@ -14,7 +14,7 @@ class TipoJuzgados extends Migration
     {
         Schema::create('Tipo_Juzgados', function(Blueprint $table){
             $table->increments('id_TipoJuzgado');
-            $table->string('TipoJuzgado',150)->nullable(false)->change();
+            $table->string('TipoJuzgado',150)->nullable(false)->changue();
             $table->rememberToken();
             $table->timestamps();
         });

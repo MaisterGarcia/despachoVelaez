@@ -14,7 +14,7 @@ class TipoTareas extends Migration
     {
         Schema::create('Tipo_Tareas', function(Blueprint $table){
             $table->increments('id_TipoTarea');
-            $table->string('NomTipoTarea',200)->nullable(false)->change();
+            $table->string('NomTipoTarea',200)->nullable(false)->changue();
             $table->rememberToken();
             $table->timestamps();
         });
