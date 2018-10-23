@@ -13,8 +13,24 @@
 		<i> {{ $errors->first('id_Tarea') }} </i> 
 		@endif	<br>
 
-		Clave Tipo Tarea: <input type = 'text' name = 'id_Tarea' value="{{$idTarea}}" readonly = 'readonly'>
-		<br><br>
+		Clave Tarea: <input type = 'text' name = 'id_Tarea' value="{{$idTarea}}" readonly = 'readonly'>
+		<br>
+		@if($errors->first('NomTarea'))
+		<i> {{ $errors->first('NomTarea') }} </i> 
+		@endif	<br>
+		Nombre de Tarea a Realizar: <input type = 'text' name = 'NomTarea' value="{{old('NomTarea')}}"><br><br>
+		@if($errors->first('FechaLimite'))
+		<i> {{ $errors->first('FechaLimite') }} </i> 
+		@endif
+		Introduzca Fecha de Limite de Realización de Tarea: <br>
+		 <input type = 'text' name = 'FechaLimite' value="{{old('FechaLimite')}}" placeholder="Formato (año-Mes-dia)">
+		<br><br> 
+		@if($errors->first('FechaFin'))
+		<i> {{ $errors->first('FechaFin') }} </i> 
+		@endif
+		Introduzca Fecha de Finalización de Tarea: <br>
+		 <input type = 'text' name = 'FechaFin' value="{{old('FechaFin')}}" placeholder="Formato (año-Mes-dia)">
+		<br><br> 
 		Seleccione Abogado a Asignar: <select name = 'num_folio'>
 			@foreach($abogados as $ab)
 			<option value = '{{$ab->num_folio}}'>{{$ab->NomAbogado.' '.$ab->AppAbogado.' '.$ab->ApmAbogado}}</option>
@@ -27,7 +43,6 @@
 			@endforeach
 		</select>
 		<br><br>
-		Fecha: <div id="datepicker" align="center"></div>
 		<input type = 'submit' value = 'Guardar'>
 		<input type = 'reset' value = 'Cancelar'>
 	</form>

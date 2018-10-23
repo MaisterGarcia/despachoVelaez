@@ -31,3 +31,11 @@ Route::POST('/guardaTarea','controlador_Tareas@guardaTarea')->name('guardaTarea'
 Route::get('/reporteTarea','controlador_Tareas@reporteTarea');
 Route::get('/modificamTarea/{id_Tarea}','controlador_Tareas@modificamTarea')->name('modificamTArc');
 Route::POST('/guardaedicionmTarea','controlador_Tareas@guardaedicionmTarea')->name('guardaedicionmTarea');
+
+Route::get('/altaTipoJuicio','controlador_TipoJuicio@altaTipJui')->name('altaTipoJuicio');
+Route::POST('/guardaTipoJuicio','controlador_TipoJuicio@guardaTipoJuicio')->name('guardaTipoJuicio');
+Route::get('/reporteTipoJuicios','controlador_TipoJuicio@reporteTipJui');
+
+Route::get('/altaTipoJuzgado','controlador_TipoJuzgados@altaTipJuz')->name('altaTipoJuzgado');
+Route::POST('/guardaTipoJuzgado','controlador_TipoJuzgados@guardaTipoJuzgado')->name('guardaTipoJuzgado');
+Route::get('/reporteTipoJuzgados','controlador_TipoJuzgados@reporteTipJuz');

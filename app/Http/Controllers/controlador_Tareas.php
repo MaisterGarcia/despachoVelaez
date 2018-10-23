@@ -30,6 +30,9 @@ class controlador_Tareas extends Controller
     public function guardaTarea(Request $request)
 	{   
 	$id_Tarea = $request->id_Tarea;
+	$NomTarea = $request->NomTarea;
+	$FechaLimite = $request->FechaLimite;
+	$FechaFin = $request->FechaFin;
 	$num_folio = $request->num_folio;
 	$id_EstTar = $request->id_EstTar;
 	//return "$id_Tarea y $num_folio y $id_EstTar";
@@ -37,11 +40,16 @@ class controlador_Tareas extends Controller
 	//Se mandan los datos a la base de datos
 	 $this->validate($request,[
 	     'id_Tarea'=>'required|numeric',
-         //'TipoAbogado'=>['regex:/^[A-Z-\s]+([a-zA-Z-áéíóúñÑ\s])+$/']
+         'NomTarea'=>['required','regex:/^[A-Z-\s]+([a-zA-Z-áéíóúñÑ\s])+$/'],
+         'FechaLimite'=>['required','regex:/^\d{4}-\d{2}-\d{2}$/'],
+         'FechaFin'=>['required','regex:/^\d{4}-\d{2}-\d{2}$/'],
 	     ]);
 		 //insert into tipo_abogados (idTipoAbogado,TipoAbogado)-------
 	        $Tar = new tareas;
 			$Tar->id_Tarea = $request->id_Tarea;
+			$Tar->NomTarea = $request->NomTarea;
+			$Tar->FechaLimite = $request->FechaLimite;
+			$Tar->FechaFin = $request->FechaFin;
 			$Tar->num_folio = $request->num_folio;
 			$Tar->id_EstTar = $request->id_EstTar;
 			$Tar->save();
@@ -56,6 +64,7 @@ class controlador_Tareas extends Controller
 		->join('abogados','tareas.num_folio','=','abogados.num_folio')
 		->join('estado_tareas','tareas.id_EstTar','=','estado_tareas.id_EstTar')
 		->select('tareas.*','abogados.NomAbogado','estado_tareas.EstadoTarea')
+		->orderBy('id_Tarea','asc')
 		->get();
 
 
