@@ -37,7 +37,7 @@ class controlador_TipoJuicio extends Controller
 			->with('proceso',$proceso)
 			->with('mensaje',$mensaje);
 	}
-	public function reporteTipJuz(){
+	public function reporteTipJuic(){
 		$TipJui = tipo_juicios::orderBy('id_TipoJuicio','asc')->get();
 		return view('sistema.reporte_TipoJuicios')
 		->with('TipJui',$TipJui);

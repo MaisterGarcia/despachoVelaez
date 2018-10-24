@@ -34,7 +34,7 @@ Route::POST('/guardaedicionmTarea','controlador_Tareas@guardaedicionmTarea')->na
 
 Route::get('/altaTipoJuicio','controlador_TipoJuicio@altaTipJui')->name('altaTipoJuicio');
 Route::POST('/guardaTipoJuicio','controlador_TipoJuicio@guardaTipoJuicio')->name('guardaTipoJuicio');
-Route::get('/reporteTipoJuicios','controlador_TipoJuicio@reporteTipJui');
+Route::get('/reporteTipoJuicios','controlador_TipoJuicio@reporteTipJuic');
 
 Route::get('/altaTipoJuzgado','controlador_TipoJuzgados@altaTipJuz')->name('altaTipoJuzgado');
 Route::POST('/guardaTipoJuzgado','controlador_TipoJuzgados@guardaTipoJuzgado')->name('guardaTipoJuzgado');

@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Registra Tipo Juicio</title>
-</head>
-<body>
-	<h1 align="center">Registrar Tipo de Juicio</h1>
-	<form action ="{{route('guardaTipoJuicio')}}" method = 'POST' align="center">
-		{{csrf_field()}}
+@extends('sistema.app')
 
-		@if($errors->first('id_TipoJuicio'))
-		<i> {{ $errors->first('id_TipoJuicio') }} </i> 
-		@endif	<br>
-		Clave Tipo Juicio: <input type = 'text' name = 'id_TipoJuicio' value="{{$idTipJuic}}" readonly = 'readonly'>
-		<br><br>
-		@if($errors->first('NomTipoJuicio')) 
-		<i> {{ $errors->first('NomTipoJuicio') }} </i> 
-		@endif	<br>
-		Nombre del Juicio: <input type = 'text' name = 'NomTipoJuicio' value="{{old('NomTipoJuicio')}}">
-		<br>
-		<br>
-		<input type = 'submit' value = 'Guardar'>
-		<input type = 'reset' value = 'Cancelar'>
-	</form>
-</body>
-</html>
+@section('body')
+<div class="row">
+		<div class="col-xs-12 col-md-12">
+			<div class="card">
+				<div class="card-header">
+					Tipo de Juicio
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Regitsrar Tipo de Juicio</h3>
+					<form action ="{{route('guardaTipoJuicio')}}" method = 'POST' align="center">
+						{{csrf_field()}}
+
+						@if($errors->first('id_TipoJuicio'))
+						<i> {{ $errors->first('id_TipoJuicio') }} </i> 
+						@endif	<br>
+						Clave Tipo Juicio: <input type = 'text' name = 'id_TipoJuicio' value="{{$idTipJuic}}" readonly = 'readonly' class="form-control">
+						<br><br>
+						@if($errors->first('NomTipoJuicio')) 
+						<i> {{ $errors->first('NomTipoJuicio') }} </i> 
+						@endif	<br>
+						Nombre del Juicio: <input type = 'text' name = 'NomTipoJuicio' value="{{old('NomTipoJuicio')}}" class="form-control">
+						<br>
+						<br>
+						<input type = 'submit' value = 'Guardar' class="btn btn-success">
+						<input type = 'reset' value = 'Cancelar' class="btn btn-warning">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+@stop

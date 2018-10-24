@@ -25,11 +25,10 @@
 			</div>
 		</header>
 		<aside>
-			<a href="">| Estado de la tarea</a>
-			<a href="">| Tipo de juicio</a>
-			<a href="">| Tipo de Juzgado</a>
+			<a href="{{route('altaTipoJuicio')}}">| Tipo de Juicio</a>
+			<a href="{{route('altaTarea')}}">| Tareas</a>
+			<a href="{{route('altaTipoJuzgado')}}">| Tipo de Juzgado</a>
 			<a href="{{route('altaTipoArchivo')}}">| Tipo de Archivo</a>
-			<a href="">| Tipo de Moneda</a>
 			<a href="{{route('altaTipoAbogado')}}">| Tipo de Abogado</a>
 		</aside>
 		<div id="body">@yield("body")</div>
