@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class tipo_abogados extends Model
 {
-    protected $primaryKey = 'idTipoAbogado';  
-  	protected $fillable=['idTipoAbogado','TipoAbogado'];
- 
+	use SoftDeletes;
+    protected $primaryKey = 'IdTipoAbogado';  
+  	protected $fillable=['IdTipoAbogado','TipoAbogado'];
+ 	protected $date=['deleted_at'];
 }

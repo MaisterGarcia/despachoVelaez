@@ -14,7 +14,8 @@ class Municipios extends Migration
     {
         Schema::create('Municipios', function (Blueprint $table) {
             $table->increments('id_mun');
-            $table->string('NomMunicipio',100)->nullable(false)->changue(); 
+            $table->string('NomMunicipio',100)->nullable(false)->changue();
+            $table->integer('id_est')->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });

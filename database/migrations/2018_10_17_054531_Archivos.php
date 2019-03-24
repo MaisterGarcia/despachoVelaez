@@ -21,6 +21,7 @@ class Archivos extends Migration
             $table->integer('id_TipoArchivo')->unsigned();
             $table->foreign('id_TipoArchivo')->references('id_TipoArchivo')->on('Tipo_Archivos');
             $table->string('URL',255);
+            $table->string('activo',3);
             $table->rememberToken();
             $table->timestamps();
         });

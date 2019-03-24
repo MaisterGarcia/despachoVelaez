@@ -1,0 +1,802 @@
+/* --------------------------------------
+=========================================
+PVR Tech Admin - Multipurpose Bootstrap Admin Dashboard Template
+Version: 1.0
+Designed By: Palani Velayudam
+=========================================
+1. Skin
+2. Dark Layout
+3. Light Sidebar
+--------------------------------------------------------*/
+/** ************************************* **
+	DO NOT CHANGE ANYTHING HERE!
+	REWRITE IN A CUSTOM CSS FILE IF REQUIRED!
+ ** ************************************* **/
+
+/**	1. Skin
+*************************************************** **/
+.navbar-logo,
+.coming-soon .brand .logo,
+.login .login-header .brand .logo {
+    border-color: #6c71d1 #5d62cd #4e54c8;
+}
+
+.badge.badge-success, .label.label-success, .navbar-nav > li > a .label {
+    background: #44884f !important;
+}
+
+.btn.btn-success {
+    color: #fff;
+    background: #4e54c8 !important;
+    border-color: #4e54c8 !important;
+}
+
+.btn-outline-success {
+    color: #4e54c8 !important;
+    border-color: #4e54c8 !important;
+}
+
+.btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #4e54c8 !important;
+    border-color: #4e54c8 !important;
+}
+
+.product article .new-tag,
+.product article .cart-btn:hover,
+.navbar.navbar-inverse .navbar-brand,
+.sidebar .nav > li.active > a,
+.sidebar .nav > li.active > a:focus,
+.sidebar .nav > li.active > a:hover,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+.label.label-theme,
+.btn.btn-scroll-to-top,
+.accordion_success .panel-heading,
+span.twitter-typeahead .active.tt-suggestion,
+span.twitter-typeahead .tt-suggestion.tt-cursor,
+span.twitter-typeahead .active.tt-suggestion:focus,
+span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+span.twitter-typeahead .active.tt-suggestion:hover,
+span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #337733;
+    background: -webkit-linear-gradient(to right, #8fb163, #4eaa6a);
+    background: linear-gradient(to left, #44d163, #3abd74);
+
+}
+
+.navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+.text-theme,
+.sidebar .sub-menu > li.active > a:before {
+    color: #44884f;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-header {
+        background:#44884f;
+    }
+}
+
+.pace-progress {
+    background: #4e54c8;
+}
+
+.pace .pace-activity {
+    border-top-color: #4e54c8;
+    border-left-color: #4e54c8;
+}
+
+.product article .title_pro,
+.panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #4e54c8;
+}
+
+.light_sidebar .sidebar .nav > li.active > a .badge,
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover,
+.light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #44884f;
+}
+
+.top-menu .nav > li.active > a,
+.top-menu .nav > li.active > a:focus,
+.top-menu .nav > li.active > a:hover {
+    background: #4e54c8;
+}
+
+.todolist > li.active > a .todolist-input i:before, .todolist > li.active > a:focus .todolist-input i:before, .todolist > li.active > a:hover .todolist-input i:before {
+    color: #4e54c8 !important;
+}
+
+.panel-heading:after {
+    border-bottom: 3px solid #4e54c8;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background: #4e54c8;
+    border-color: #4e54c8;
+}
+
+
+/**	3. Light Sidebar
+*************************************************** **/
+.light_sidebar .sidebar,
+.light_sidebar .sidebar-bg,
+.light_sidebar .sidebar .nav > li.nav-profile {
+    background: #fff
+}
+
+.light_sidebar .sidebar .nav > li > a {
+    color: #2d353c;
+}
+
+.page-sidebar-minified.light_sidebar .sidebar .nav li.has-sub > .sub-menu,
+.page-sidebar-minified.light_sidebar .sidebar .nav > li.has-sub:focus > a,
+.page-sidebar-minified.light_sidebar .sidebar .nav > li.has-sub:hover > a,
+.light_sidebar .sidebar .nav > li .sub-menu {
+    background: #f0f3f4 !important
+}
+
+.light_sidebar .sidebar .nav > li .sub-menu:before {
+    background: #B1B9C0 !important
+}
+
+.light_sidebar .sidebar .nav > li .sub-menu > li > a:before {
+    content: '\E15B';
+    font-family: "Material Icons";
+    color: #B1B9C0;
+}
+
+.light_sidebar .sidebar .nav > li .sidebar-minify-btn,
+.light_sidebar .sidebar .nav > li .sidebar-minify-btn:focus,
+.light_sidebar .sidebar .nav > li .sidebar-minify-btn:hover,
+.light_sidebar .sidebar .nav > li.active.expand > a,
+.light_sidebar .sidebar .nav > li.active > a,
+.light_sidebar .sidebar .nav > li.active > a:focus,
+.light_sidebar .sidebar .nav > li.active > a:hover,
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.active:focus > a,
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.active:hover > a,
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.active > a {
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+    background: linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
+.light_sidebar .sidebar .nav > li.expand > a,
+.light_sidebar .sidebar .nav > li > a:focus,
+.light_sidebar .sidebar .nav > li > a:hover,
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.has-sub:focus > a,
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.has-sub:hover > a {
+    background: #E6E9EA !important;
+}
+
+.light_sidebar .sidebar .nav > li .sub-menu > li.active > a:before,
+.light_sidebar .sidebar .nav > li.active > a:hover,
+.light_sidebar .sidebar .nav > li.active > a:focus {
+    color: #575d63 !important
+}
+
+.light_sidebar .sidebar .sub-menu > li.active > a,
+.light_sidebar .sidebar .sub-menu > li.active > a:focus,
+.light_sidebar .sidebar .sub-menu > li.active > a:hover,
+.light_sidebar .sidebar .sub-menu > li > a:focus,
+.light_sidebar .sidebar .sub-menu > li > a:hover {
+    color: #333
+}
+
+.light_sidebar .page-sidebar-minified .sidebar .nav > li.active > a > i,
+.light_sidebar .sidebar .nav > li.active > a {
+    color: #FFF !important
+}
+
+.light_sidebar .sidebar .sub-menu > li > a,
+.light_sidebar .sidebar .nav > li.nav-profile,
+.light_sidebar .sidebar .nav > li.nav-profile i,
+.light_sidebar .sidebar .nav > li.nav-profile .info small,
+.light_sidebar .charjs-chart .charjs-chart-label strong,
+.light_sidebar .charjs-chart .charjs-chart-label span {
+    color: #000;
+}
+
+.light_sidebar .nav-profile .tooltip .tooltip-inner {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+}
+
+/**	4. Orange
+*************************************************** **/
+body.orange .navbar-logo,
+body.orange .coming-soon .brand .logo,
+body.orange .login .login-header .brand .logo {
+    border-color: #ffb75c #ffae48 #ffa534;
+}
+
+body.orange .badge.badge-success,
+body.orange .label.label-success,
+body.orange .navbar-nav > li > a .label {
+    background: #ffa534 !important;
+}
+
+body.orange .btn.btn-success {
+    color: #fff;
+    background: #ffa534 !important;
+    border-color: #ffa534 !important;
+}
+
+body.orange .btn-outline-success {
+    color: #ffa534 !important;
+    border-color: #ffa534 !important;
+}
+
+body.orange .btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #ffa534 !important;
+    border-color: #ffa534 !important;
+}
+
+body.orange .product article .new-tag,
+body.orange .product article .cart-btn:hover,
+body.orange .navbar.navbar-inverse .navbar-brand,
+body.orange .sidebar .nav > li.active > a,
+body.orange .sidebar .nav > li.active > a:focus,
+body.orange .sidebar .nav > li.active > a:hover,
+body.orange .page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+body.orange .page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+body.orange .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+body.orange .label.label-theme,
+body.orange .btn.btn-scroll-to-top,
+body.orange .accordion_success .panel-heading,
+body.orange span.twitter-typeahead .active.tt-suggestion,
+body.orange span.twitter-typeahead .tt-suggestion.tt-cursor,
+body.orange span.twitter-typeahead .active.tt-suggestion:focus,
+body.orange span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+body.orange span.twitter-typeahead .active.tt-suggestion:hover,
+body.orange span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #ffa534;
+    background: -webkit-linear-gradient(top, #FFA534 0%, rgba(255, 82, 33, 0.7) 100%);
+    background: linear-gradient(to bottom, #FFA534 0%, rgba(255, 82, 33, 0.7) 100%);
+
+}
+
+body.orange .navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body.orange .text-theme,
+body.orange .sidebar .sub-menu > li.active > a:before {
+    color: #ffb75c;
+}
+
+@media (max-width: 767px) {
+    body.orange .navbar-inverse .navbar-header {
+        background: #ffa534;
+    }
+}
+
+body.orange .pace-progress {
+    background: #ffa534;
+}
+
+body.orange .pace .pace-activity {
+    border-top-color: #ffa534;
+    border-left-color: #ffa534;
+}
+
+body.orange .product article .title_pro,
+body.orange .panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #ffa534;
+}
+
+body.orange .light_sidebar .sidebar .nav > li.active > a .badge,
+body.orange .nav-pills > li.active > a,
+body.orange .nav-pills > li.active > a:focus,
+body.orange .nav-pills > li.active > a:hover,
+body.orange .light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #ffa534;
+}
+
+body.orange .top-menu .nav > li.active > a,
+body.orange .top-menu .nav > li.active > a:focus,
+body.orange .top-menu .nav > li.active > a:hover {
+    background: #ffa534;
+}
+
+body.orange .todolist > li.active > a .todolist-input i:before,
+body.orange .todolist > li.active > a:focus .todolist-input i:before,
+body.orange .todolist > li.active > a:hover .todolist-input i:before {
+    color: #ffa534 !important;
+}
+
+body.orange .panel-heading:after {
+    border-bottom: 3px solid #ffa534;
+}
+
+body.orange .pagination > .active > a,
+body.orange .pagination > .active > a:focus,
+body.orange .pagination > .active > a:hover,
+body.orange .pagination > .active > span,
+body.orange .pagination > .active > span:focus,
+body.orange .pagination > .active > span:hover {
+    background: #ffa534;
+    border-color: #ffa534;
+}
+
+/**	5. green
+*************************************************** **/
+body.green .navbar-logo,
+body.green .coming-soon .brand .logo,
+body.green .login .login-header .brand .logo {
+    border-color: #9fd544 #93d02d #87CB16;
+}
+
+body.green .badge.badge-success,
+body.green .label.label-success,
+body.green .navbar-nav > li > a .label {
+    background: #87CB16 !important;
+}
+
+body.green .btn.btn-success {
+    color: #fff;
+    background: #87CB16 !important;
+    border-color: #87CB16 !important;
+}
+
+body.green .btn-outline-success {
+    color: #87CB16 !important;
+    border-color: #87CB16 !important;
+}
+
+body.green .btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #87CB16 !important;
+    border-color: #87CB16 !important;
+}
+
+body.green .product article .new-tag,
+body.green .product article .cart-btn:hover,
+body.green .navbar.navbar-inverse .navbar-brand,
+body.green .sidebar .nav > li.active > a,
+body.green .sidebar .nav > li.active > a:focus,
+body.green .sidebar .nav > li.active > a:hover,
+body.green .page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+body.green .page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+body.green .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+body.green .label.label-theme,
+body.green .btn.btn-scroll-to-top,
+body.green .accordion_success .panel-heading,
+body.green span.twitter-typeahead .active.tt-suggestion,
+body.green span.twitter-typeahead .tt-suggestion.tt-cursor,
+body.green span.twitter-typeahead .active.tt-suggestion:focus,
+body.green span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+body.green span.twitter-typeahead .active.tt-suggestion:hover,
+body.green span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #87CB16;
+    background: -webkit-linear-gradient(top, #87CB16 0%, rgba(109, 192, 48, 0.7) 100%);
+    background: linear-gradient(to bottom, #87CB16 0%, rgba(109, 192, 48, 0.7) 100%);
+
+}
+
+body.green .navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body.green .text-theme,
+body.green .sidebar .sub-menu > li.active > a:before {
+    color: #9fd544;
+}
+
+@media (max-width: 767px) {
+    body.green .navbar-inverse .navbar-header {
+        background: #87CB16;
+    }
+}
+
+body.green .pace-progress {
+    background: #87CB16;
+}
+
+body.green .pace .pace-activity {
+    border-top-color: #87CB16;
+    border-left-color: #87CB16;
+}
+
+body.green .product article .title_pro,
+body.green .panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #87CB16;
+}
+
+body.green .light_sidebar .sidebar .nav > li.active > a .badge,
+body.green .nav-pills > li.active > a,
+body.green .nav-pills > li.active > a:focus,
+body.green .nav-pills > li.active > a:hover,
+body.green .light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #87CB16;
+}
+
+body.green .top-menu .nav > li.active > a,
+body.green .top-menu .nav > li.active > a:focus,
+body.green .top-menu .nav > li.active > a:hover {
+    background: #87CB16;
+}
+
+body.green .todolist > li.active > a .todolist-input i:before,
+body.green .todolist > li.active > a:focus .todolist-input i:before,
+body.green .todolist > li.active > a:hover .todolist-input i:before {
+    color: #87CB16 !important;
+}
+
+body.green .panel-heading:after {
+    border-bottom: 3px solid #87CB16;
+}
+
+body.green .pagination > .active > a,
+body.green .pagination > .active > a:focus,
+body.green .pagination > .active > a:hover,
+body.green .pagination > .active > span,
+body.green .pagination > .active > span:focus,
+body.green .pagination > .active > span:hover {
+    background: #87CB16;
+    border-color: #87CB16;
+}
+
+/**	6. red
+*************************************************** **/
+body.red .navbar-logo,
+body.red .coming-soon .brand .logo,
+body.red .login .login-header .brand .logo {
+    border-color: #fb666e #fb535d #FB404B;
+}
+
+body.red .badge.badge-success,
+body.red .label.label-success,
+body.red .navbar-nav > li > a .label {
+    background: #FB404B !important;
+}
+
+body.red .btn.btn-success {
+    color: #fff;
+    background: #FB404B !important;
+    border-color: #FB404B !important;
+}
+
+body.red .btn-outline-success {
+    color: #FB404B !important;
+    border-color: #FB404B !important;
+}
+
+body.red .btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #FB404B !important;
+    border-color: #FB404B !important;
+}
+
+body.red .product article .new-tag,
+body.red .product article .cart-btn:hover,
+body.red .navbar.navbar-inverse .navbar-brand,
+body.red .sidebar .nav > li.active > a,
+body.red .sidebar .nav > li.active > a:focus,
+body.red .sidebar .nav > li.active > a:hover,
+body.red .page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+body.red .page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+body.red .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+body.red .label.label-theme,
+body.red .btn.btn-scroll-to-top,
+body.red .accordion_success .panel-heading,
+body.red span.twitter-typeahead .active.tt-suggestion,
+body.red span.twitter-typeahead .tt-suggestion.tt-cursor,
+body.red span.twitter-typeahead .active.tt-suggestion:focus,
+body.red span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+body.red span.twitter-typeahead .active.tt-suggestion:hover,
+body.red span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #FB404B;
+    background: -webkit-linear-gradient(top, #FB404B 0%, rgba(187, 5, 2, 0.7) 100%);
+    background: linear-gradient(to bottom, #FB404B 0%, rgba(187, 5, 2, 0.7) 100%);
+
+}
+
+body.red .navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body.red .text-theme,
+body.red .sidebar .sub-menu > li.active > a:before {
+    color: #fb666e;
+}
+
+@media (max-width: 767px) {
+    body.red .navbar-inverse .navbar-header {
+        background: #FB404B;
+    }
+}
+
+body.red .pace-progress {
+    background: #FB404B;
+}
+
+body.red .pace .pace-activity {
+    border-top-color: #FB404B;
+    border-left-color: #FB404B;
+}
+
+body.red .product article .title_pro,
+body.red .panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #FB404B;
+}
+
+body.red .light_sidebar .sidebar .nav > li.active > a .badge,
+body.red .nav-pills > li.active > a,
+body.red .nav-pills > li.active > a:focus,
+body.red .nav-pills > li.active > a:hover,
+body.red .light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #FB404B;
+}
+
+body.red .top-menu .nav > li.active > a,
+body.red .top-menu .nav > li.active > a:focus,
+body.red .top-menu .nav > li.active > a:hover {
+    background: #FB404B;
+}
+
+body.red .todolist > li.active > a .todolist-input i:before,
+body.red .todolist > li.active > a:focus .todolist-input i:before,
+body.red .todolist > li.active > a:hover .todolist-input i:before {
+    color: #FB404B !important;
+}
+
+body.red .panel-heading:after {
+    border-bottom: 3px solid #FB404B;
+}
+
+body.red .pagination > .active > a,
+body.red .pagination > .active > a:focus,
+body.red .pagination > .active > a:hover,
+body.red .pagination > .active > span,
+body.red .pagination > .active > span:focus,
+body.red .pagination > .active > span:hover {
+    background: #FB404B;
+    border-color: #FB404B;
+}
+
+/**	7. azure
+*************************************************** **/
+body.azure .navbar-logo,
+body.azure .coming-soon .brand .logo,
+body.azure .login .login-header .brand .logo {
+    border-color: #4ed6f2 #38d1f0 #23ccef;
+}
+
+body.azure .badge.badge-success,
+body.azure .label.label-success,
+body.azure .navbar-nav > li > a .label {
+    background: #23ccef !important;
+}
+
+body.azure .btn.btn-success {
+    color: #fff;
+    background: #23ccef !important;
+    border-color: #23ccef !important;
+}
+
+body.azure .btn-outline-success {
+    color: #23ccef !important;
+    border-color: #23ccef !important;
+}
+
+body.azure .btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #23ccef !important;
+    border-color: #23ccef !important;
+}
+
+body.azure .product article .new-tag,
+body.azure .product article .cart-btn:hover,
+body.azure .navbar.navbar-inverse .navbar-brand,
+body.azure .sidebar .nav > li.active > a,
+body.azure .sidebar .nav > li.active > a:focus,
+body.azure .sidebar .nav > li.active > a:hover,
+body.azure .page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+body.azure .page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+body.azure .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+body.azure .label.label-theme,
+body.azure .btn.btn-scroll-to-top,
+body.azure .accordion_success .panel-heading,
+body.azure span.twitter-typeahead .active.tt-suggestion,
+body.azure span.twitter-typeahead .tt-suggestion.tt-cursor,
+body.azure span.twitter-typeahead .active.tt-suggestion:focus,
+body.azure span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+body.azure span.twitter-typeahead .active.tt-suggestion:hover,
+body.azure span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #23ccef;
+    background: -webkit-linear-gradient(top, #23CCEF 0%, rgba(64, 145, 255, 0.7) 100%);
+    background: linear-gradient(to bottom, #23CCEF 0%, rgba(64, 145, 255, 0.7) 100%);
+
+}
+
+body.azure .navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body.azure .text-theme,
+body.azure .sidebar .sub-menu > li.active > a:before {
+    color: #4ed6f2;
+}
+
+@media (max-width: 767px) {
+    body.azure .navbar-inverse .navbar-header {
+        background: #23ccef;
+    }
+}
+
+body.azure .pace-progress {
+    background: #23ccef;
+}
+
+body.azure .pace .pace-activity {
+    border-top-color: #23ccef;
+    border-left-color: #23ccef;
+}
+
+body.azure .product article .title_pro,
+body.azure .panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #23ccef;
+}
+
+body.azure .light_sidebar .sidebar .nav > li.active > a .badge,
+body.azure .nav-pills > li.active > a,
+body.azure .nav-pills > li.active > a:focus,
+body.azure .nav-pills > li.active > a:hover,
+body.azure .light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #23ccef;
+}
+
+body.azure .top-menu .nav > li.active > a,
+body.azure .top-menu .nav > li.active > a:focus,
+body.azure .top-menu .nav > li.active > a:hover {
+    background: #23ccef;
+}
+
+body.azure .todolist > li.active > a .todolist-input i:before,
+body.azure .todolist > li.active > a:focus .todolist-input i:before,
+body.azure .todolist > li.active > a:hover .todolist-input i:before {
+    color: #23ccef !important;
+}
+
+body.azure .panel-heading:after {
+    border-bottom: 3px solid #23ccef;
+}
+
+body.azure .pagination > .active > a,
+body.azure .pagination > .active > a:focus,
+body.azure .pagination > .active > a:hover,
+body.azure .pagination > .active > span,
+body.azure .pagination > .active > span:focus,
+body.azure .pagination > .active > span:hover {
+    background: #23ccef;
+    border-color: #23ccef;
+}
+
+/**	8. black
+*************************************************** **/
+body.black .navbar-logo,
+body.black .coming-soon .brand .logo,
+body.black .login .login-header .brand .logo {
+    border-color: #939393 #868686 #797979;
+}
+
+body.black .badge.badge-success,
+body.black .label.label-success,
+body.black .navbar-nav > li > a .label {
+    background: #797979 !important;
+}
+
+body.black .btn.btn-success {
+    color: #fff;
+    background: #797979 !important;
+    border-color: #797979 !important;
+}
+
+body.black .btn-outline-success {
+    color: #797979 !important;
+    border-color: #797979 !important;
+}
+
+body.black .btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #797979 !important;
+    border-color: #797979 !important;
+}
+
+body.black .product article .new-tag,
+body.black .product article .cart-btn:hover,
+body.black .navbar.navbar-inverse .navbar-brand,
+body.black .sidebar .nav > li.active > a,
+body.black .sidebar .nav > li.active > a:focus,
+body.black .sidebar .nav > li.active > a:hover,
+body.black .page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+body.black .page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+body.black .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+body.black .label.label-theme,
+body.black .btn.btn-scroll-to-top,
+body.black .accordion_success .panel-heading,
+body.black span.twitter-typeahead .active.tt-suggestion,
+body.black span.twitter-typeahead .tt-suggestion.tt-cursor,
+body.black span.twitter-typeahead .active.tt-suggestion:focus,
+body.black span.twitter-typeahead .tt-suggestion.tt-cursor:focus,
+body.black span.twitter-typeahead .active.tt-suggestion:hover,
+body.black span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
+    background: #87CB16;
+    background: -webkit-linear-gradient(top, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: linear-gradient(to bottom, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
+
+}
+
+body.black .navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body.black .text-theme,
+body.black .sidebar .sub-menu > li.active > a:before {
+    color: #939393;
+}
+
+@media (max-width: 767px) {
+    body.black .navbar-inverse .navbar-header {
+        background: #797979;
+    }
+}
+
+body.black .pace-progress {
+    background: #797979;
+}
+
+body.black .pace .pace-activity {
+    border-top-color: #797979;
+    border-left-color: #797979;
+}
+
+body.black .product article .title_pro,
+body.black .panel-title .accordion-toggle.accordion-toggle-styled .fa:before {
+    color: #797979;
+}
+
+body.black .light_sidebar .sidebar .nav > li.active > a .badge,
+body.black .nav-pills > li.active > a,
+body.black .nav-pills > li.active > a:focus,
+body.black .nav-pills > li.active > a:hover,
+body.black .light_sidebar .sidebar .nav > li.active > a .label.label-theme {
+    background: #797979;
+}
+
+body.black .top-menu .nav > li.active > a,
+body.black .top-menu .nav > li.active > a:focus,
+body.black .top-menu .nav > li.active > a:hover {
+    background: #797979;
+}
+
+body.black .todolist > li.active > a .todolist-input i:before,
+body.black .todolist > li.active > a:focus .todolist-input i:before,
+body.black .todolist > li.active > a:hover .todolist-input i:before {
+    color: #797979 !important;
+}
+
+body.black .panel-heading:after {
+    border-bottom: 3px solid #797979;
+}
+
+body.black .pagination > .active > a,
+body.black .pagination > .active > a:focus,
+body.black .pagination > .active > a:hover,
+body.black .pagination > .active > span,
+body.black .pagination > .active > span:focus,
+body.black .pagination > .active > span:hover {
+    background: #797979;
+    border-color: #797979;
+}

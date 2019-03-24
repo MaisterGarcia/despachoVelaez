@@ -1,40 +1,3 @@
-/*body{
-background-color: #FBFCFC;
-}
-
-h1{ 
-	color:#FBFCFC;
-	 background-color: black; 
-	 width: 1368px;
-	 height: 50px;
-
-}
-h2{
-	color: #FBFCFC;
-}
-
-a{
-	color:#FBFCFC;;
-	font-size:20px;
-	margin-left: 10px;
-}
-
-.refs{
-	background: orange;
-	width: 1368px;
-	height: 50px;
-}
-
-.menus{
-	color:#FBFCFC;
-	background: green;
-	width: 150px; 
-	height: 1368px;
-	margin:0px;
-	padding:0px; 
-}*/
-
-
 #app{
 	position: absolute;
 	height: 100%;
@@ -43,13 +6,28 @@ a{
 #app a{
 	color: #fff!important;
 }
-#app input{
-	margin-bottom: 10px;
+.padding-none{
+	padding: 0;
+}
+.margin-none{
+	margin: 0;
+}
+.flex{
+	display: flex;
+}
+.flex-center{
+	justify-content: center;
+	align-items: center;
 }
 
 
+.row{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /*HEADER*/
 #app header{
+	font-family: 'Montserrat', sans-serif;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,42 +37,121 @@ a{
 	background: #444;
 	position: fixed;
 	color: white;
+	z-index: 100;
 }
 #app header nav a{
+	font-family: 'Montserrat', sans-serif;
 	margin-left: 5px;
 }
 
 
 /*ASEIDE*/
 #app aside{
+	font-family: 'Montserrat', sans-serif;
 	position: fixed;
 	width: 200px;
 	height: calc(100% - 100px);
 	background: orange;
-	bottom: 0;
+	top: 100px;
+	/*overflow-y: scroll;*/
+	z-index: 100;
 }
-#app aside a{
 
-	display: flex;
-	align-items: center;
-	padding-left: 20px;
-	height: 40px;
-	width: 100%;
-	text-decoration: none;
-	border-bottom: 1px solid #777;
-}
 
 /*BODY*/
 #app #body{
-	position: absolute;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
 	padding: 50px;
-	background: #fff;
 	width: calc(100% - 200px);
-	height: calc(100% - 100px);
-	bottom: 0;
-	right: 0;
+	min-height: calc(100% - 100px);
+	margin-top: 100px;
+	margin-left: 200px;
 }
 
-#app aside a:hover {
-  background-color: gold;
+/*CARD*/
+
+.card-container{
+	font-family: 'Montserrat', sans-serif;
+	height: 300px;
+	background-color: red;
+
+}
+.card-body{
+	position: relative;
+}
+.card-body .btn-fixed{
+	position: absolute;
+	right: 7.5px;
+	bottom: 7.5px;
+
+}
+
+/*.form-main{
+	-webkit-column-count:2;
+	height: 300px;
+}*/
+
+
+/*menu desplegable*/
+.menu-container{
+	width: 100%;
+	color: #fff;
+	min-width: 40px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+.menu-container a{
+	text-decoration: none;
+}
+.menu-container .title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
+.menu-container .title, .menu-container .option{
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	transition: all .3s;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.menu-container .title:hover, .menu-container .option:hover{
+	background-color: rgba(0,0,0,0.2);
+	padding-left: 25px;
+}
+.menu-container .hide{
+	display: none;
+}
+.menu-active{
+	background-color: rgba(0,0,0,0.2);
+}
+.menu-active .title{
+	background-color: rgba(0,0,0,0.2);
+}
+.menu-active .menu .option{
+	padding-left: 30px;
+	transition: all .3s;
+}
+.menu-active .menu .option:hover{
+	padding-left: 35px;
+}
+
+/*FOOTER*/
+footer{
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	position: absolute;
+	background-color: #000;
+	width: calc(100% - 200px);
+	min-height: 200px;
+	margin-left: 200px;
+	color: #aaa;
+}
+footer a{
+	display: flex;
 }

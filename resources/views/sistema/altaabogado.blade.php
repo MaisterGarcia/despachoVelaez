@@ -1,148 +1,134 @@
-<!DOCTYPE html>
-<html>
-<body>
-		<head>
-			<title>Practica 14/09/2018</title>
-		</head>
+@extends('templates.app')
 
-		<style type="text/css">
+@section("nav")
+@include("templates.layouts.nav")
+@stop 
 
-		form {
-	    	width: 400px;
-	    	height: 
-	    	font: normal bold 12px;
-		}
+@section("asside")
+@include("templates.layouts.asside")
+@stop 
 
-		form label {
-	    	display: inline-block;
-	    	width: 100px;
-		}
-
-		form input {
-	    	display: inline-block;
-	   	 	width: 150px;
-	    	margin-bottom: 10px;
-		}
-
-		</style>  
-
-		
-				<h1>Alta Abogado</h1>
-
-			
-			<div align="center" class="row">
-			<form role="form" action="{{route('guardaabogado')}}" method="POST" class="text-center" enctype="multipart/form-data"> 
-				{{csrf_field()}}
-
-				@if($errors->first('num_folio'))
-		        <i> {{ $errors->first('num_folio') }} </i>
-		        @endif <br>
-		        <div class="form-group">
-		        	<label for="num_folio">Folio:</label>
-				<input type="text" placeholder="Folio..." name="num_folio" value="{{$num_folios}}" readonly='readonly'><br>
-				</div>
-
-				@if($errors->first('NomAbogado'))
-		        <i> {{ $errors->first('NomAbogado') }} </i>
-		        @endif <br>
-		        <div class="form-group">
-		        	<label for="NomAbogado">Nombre:</label>
-				<input type="text" placeholder="Nombre..." name="NomAbogado" value="{{old('NomAbogado')}}"><br>
-				</div>
-
-				@if($errors->first('AppAbogado'))
-		        <i> {{ $errors->first('AppAbogado') }} </i>
-		        @endif <br>
-		        <div class="form-group">
-		        	<label for="AppAbogado">Paterno:</label>
-				   <input type="text" placeholder="Apellido Paterno..." name="AppAbogado" value="{{old('AppAbogado')}}"><br>
-				</div>
-
-				@if($errors->first('ApmAbogado'))
-		        <i> {{ $errors->first('ApmAbogado') }} </i>
-		        @endif <br>
-		        <div class="form-group"> 
-		        	<label for="ApmAbogado">Materno:</label>
-				<input type="text" placeholder="Apellido Materno.." name="ApmAbogado" value="{{old('ApmAbogado')}}"><br>
-				</div>
-
-				@if($errors->first('edad'))
-		        <i> {{ $errors->first('edad') }} </i>
-		        @endif <br>
-		        <div class="form-group">
-		        	<label for="edad">Edad :</label>
-				 <input type="text" placeholder=" Edad..." name="edad" value="{{old('edad')}}"><br><br>
-				</div>
-
-				@if($errors->first('sexo'))
-		        <i> {{ $errors->first('sexo') }} </i>
-		        @endif <br>
-		        <div class="form-group"> 
-		        	<label for="sexo">Sexo:</label>
-				<input type="text" placeholder="Sexo.." name="sexo" value="{{old('sexo')}}"><br>
-				</div>
-
-				@if($errors->first('email'))
-		        <i> {{ $errors->first('email') }} </i>
-		        @endif <br>
-		        <div class="form-group"> 
-		        	<label for="email">Correo:</label>
-				<input type="text" placeholder="Correo.." name="email" value="{{old('email')}}"><br>
-				</div>
-
-				@if($errors->first('telefono'))
-		        <i> {{ $errors->first('telefono') }} </i>
-		        @endif <br>
-		        <div class="form-group"> 
-		        	<label for="telefono">Telefono:</label>
-				<input type="text" placeholder="Telefono.." name="telefono" value="{{old('telefono')}}"><br>
-				</div>
-
-				@if($errors->first('EstadoCivil'))
-		        <i> {{ $errors->first('EstadoCivil') }} </i>
-		        @endif <br>
-		        <div class="form-group"> 
-		        	<label for="EstadoCivil">Estado EstadoCivil:</label>
-				<input type="text" placeholder="Estado EstadoCivil.." name="EstadoCivil" value="{{old('EstadoCivil')}}"><br>
-				</div>
-
-
-
-				Selecciona estado<select name="id_est">
-				@foreach($estados as $est)
-				<option value= '{{$est->id_est}}'>{{$est->NomEstado}} 
-				</option>	
-				@endforeach
-				</select>
-				<br>
-
-				Selecciona Municipio<select name="id_mun">
-				@foreach($municipios as $mun)
-				<option value= '{{$mun->id_mun}}'>{{$mun->NomMunicipio}} 
-				</option>	
-				@endforeach
-				</select>
-				<br>
-
-				Selecciona 	Tipo Abogado<select name="idTipoAbogado">
-				@foreach($tipo_abogados as $tipabo)
-				<option value= '{{$tipabo->idTipoAbogado}}'>{{$tipabo->nombre}} 
-				</option>	
-				@endforeach
-				</select>
-				<br>
-
-				
-		        
-
-		
-				
-
-				<!--<input type="submit" value="Guardar">
-				<input type="submit" value="Cancelar">-->
-				<button value="Guardar"> Guardar </button>
-				<button value="Cancelar"> Cancelar </button>
-
-			</form>
+@section("body") 
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				Abogados
 			</div>
-</html>
+			<div class="card-body">
+				<h3 class="card-title">Alta Abogados</h3>
+				<form role="form" action="{{route('guardaabogado')}}" method="POST" class="text-center row" enctype="multipart/form-data"> 
+					{{csrf_field()}}
+					<div class="container col-12">
+						<div class="row">
+							<div class="form-group col-6">
+								@if($errors->first('num_folio'))
+								<i> {{ $errors->first('num_folio') }} </i>
+								@endif
+								Folio:<input type="text" placeholder="Folio... Solo letras y numeros sin espacios" name="num_folio" value="{{old('num_folio')}}" class="form-control">
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('NomAbogado'))
+								<i> {{ $errors->first('NomAbogado') }} </i>
+								@endif
+								Nombre:<input type="text" placeholder="Nombre..." name="NomAbogado" value="{{old('NomAbogado')}}" class="form-control"><br>
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('AppAbogado'))
+								<i> {{ $errors->first('AppAbogado') }} </i>
+								@endif 
+								Paterno:<input type="text" placeholder="Apellido Paterno..." name="AppAbogado" value="{{old('AppAbogado')}}" class="form-control"><br>
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('ApmAbogado'))
+								<i> {{ $errors->first('ApmAbogado') }} </i>
+								@endif 
+								Materno:
+								<input type="text" placeholder="Apellido Materno.." name="ApmAbogado" value="{{old('ApmAbogado')}}" class="form-control"><br>
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('edad'))
+								<i> {{ $errors->first('edad') }} </i>
+								@endif
+								Edad :
+								<input type="text" placeholder=" Edad..." name="edad" value="{{old('edad')}}" class="form-control"><br><br>
+							</div>
+							<div class="form-group col-6">
+								Sexo:<br>
+								<label class="radio-inline">
+									<input type="radio" name="sexo" value="H" checked>Hombre
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="sexo" value="M">Mujer
+								</label> 
+							</div>
+							<div class="form-group col-6"> 
+								@if($errors->first('email'))
+								<i> {{ $errors->first('email') }} </i>
+								@endif
+								Correo:
+								<input type="text" placeholder="Correo.." name="email" value="{{old('email')}}" class="form-control"><br>
+							</div>
+							<div class="form-group col-6"> 
+								@if($errors->first('telefono'))
+								<i> {{ $errors->first('telefono') }} </i>
+								@endif 
+								Telefono:
+								<input type="text" placeholder="Telefono..(10 dígitos)" name="telefono" value="{{old('telefono')}}" class="form-control"><br>
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('EstadoCivil'))
+								<i> {{ $errors->first('EstadoCivil') }} </i>
+								@endif 
+								Estado Civil:
+								<input type="text" placeholder="Estado EstadoCivil..(Soltero o Casado)" name="EstadoCivil" value="{{old('EstadoCivil')}}" class="form-control">
+							</div>
+							<div class="form-group col-6">
+								Selecciona estado:
+								<select name="id_est" class="form-control" width="30">
+									@foreach($estados as $est)
+									<option value= '{{$est->id_est}}'>{{$est->NomEstado}} 
+									</option>	
+									@endforeach
+								</select>
+							</div>
+							<div class="form-group col-6">
+								Selecciona municipio:
+								<select name="id_mun" class="form-control" width="30">
+									@foreach($municipios as $mun)
+									<option value= '{{$mun->id_mun}}'>{{$mun->NomMunicipio}} 
+									</option>	
+									@endforeach
+								</select>
+							</div>
+							<div class="form-group col-6">
+								Selecciona 	Tipo Abogado:
+								<select name="IdTipoAbogado" class="form-control">
+									@foreach($tipoAb as $tipabo)
+									<option value= '{{$tipabo->IdTipoAbogado}}'>{{$tipabo->TipoAbogado}} 
+									</option>	
+									@endforeach
+								</select>
+							</div>
+							<div class="form-group col-6">
+								@if($errors->first('archivo'))
+								<i> {{ $errors->first('archivo') }} </i>
+								@endif 
+								Selecciona Imagen:<br>
+								<input type="file" class="form-control-file" id="exampleFormControlFile1" name="archivo">
+							</div>
+						</div>
+						<input type="submit" value="Guardar" class="btn btn-success col-2" >
+						<input type="submit" value="Cancelar" class="btn btn-warning col-2" >
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+@stop
+
+@section("footer")
+@include("templates.layouts.footer")
+@stop 

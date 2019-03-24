@@ -29,6 +29,7 @@ class Abogados extends Migration
             $table->foreign('id_mun')->references('id_mun')->on('Municipios')->onDelete('cascade');
             $table->integer('IdTipoAbogado')->unsigned();
             $table->foreign('IdTipoAbogado')->references('IdTipoAbogado')->on('Tipo_Abogados')->onDelete('cascade');
+            $table->string('Archivo',250);
             $table->rememberToken();
             $table->timestamps();
         });

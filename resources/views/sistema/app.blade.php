@@ -5,36 +5,26 @@
 
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('fonts/style.css')}}">
 </head>
 <body>
 	<div id="app">
 		<header>
-			<h3>Despacho Velazquez</h3>
-
+			<h3><span class="icon-globe"></span>Despacho Velazquez</h3>
 			<div style="display: flex; align-items: center;">
-				<nav style="margin-right: 20px;">
-					<a href="">Abogados |</a>
-					<a href="">Clientes |</a>
-					<a href="">Juicio |</a>
-					<a href="">Tareas |</a>
-					<a href="">Juzgados |</a>
-				</nav>
-				<form>
-					<input type="" class="form-control"  name="" placeholder="Buscar">
-				</form>
+				@yield("nav")
 			</div>
 		</header>
-		<aside>
-			<a href="{{route('altaTipoJuicio')}}">| Tipo de Juicio</a>
-			<a href="{{route('altaTarea')}}">| Tareas</a>
-			<a href="{{route('altaTipoJuzgado')}}">| Tipo de Juzgado</a>
-			<a href="{{route('altaTipoArchivo')}}">| Tipo de Archivo</a>
-			<a href="{{route('altaTipoAbogado')}}">| Tipo de Abogado</a>
-		</aside>
+
+		@yield("asside")
+
 		<div id="body">@yield("body")</div>
+		
+		@yield("footer")
 	</div>
 
-	<script type="{{asset('js/bootstrap.min.js')}}"></script>
-	<script type="{{asset('js/main.js')}}"></script>
+	<script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
+	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

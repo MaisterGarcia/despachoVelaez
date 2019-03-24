@@ -27,6 +27,7 @@ class Juicios extends Migration
             $table->foreign('id_Archivo')->references('id_Archivo')->on('Archivos')->onDelete('cascade');
             $table->string('FolioJuzgado',50);
             $table->foreign('FolioJuzgado')->references('FolioJuzgado')->on('Juzgados')->onDelete('cascade');
+            $table->string('archivo',255);
             $table->rememberToken();
             $table->timestamps();
         });
