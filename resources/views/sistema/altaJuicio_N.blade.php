@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,56 +10,12 @@
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="{{asset('js/retraccion_juicio.js')}}"></script>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{asset('css/botones.css')}}" rel="stylesheet" >
 	<script>
         $( function() {
             $( "#datepicker" ).datepicker();
         });
     </script>
-            <style>
- 
-
-.btn-circle {
-    width: 30px;
-    height: 30px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-}
-#boton1 { background:url('https://img.icons8.com/color/48/000000/plus.png') no-repeat; 
-border:none; 
-width: 48px;
-height: 48px;
-}
-#boton2 { background:url('https://img.icons8.com/color/48/000000/cancel.png') no-repeat; 
-border:none; 
-width: 48px;
-height: 48px;
-}
-#boton3 { background:url('https://img.icons8.com/color/48/000000/plus.png') no-repeat; 
-border:none; 
-width: 48px;
-height: 48px;
-}
-#boton4 { background:url('https://img.icons8.com/color/48/000000/cancel.png') no-repeat; 
-border:none; 
-width: 48px;
-height: 48px;
-}
-.purple-border textarea {
-    border: 1px solid #ba68c8;
-}
-.purple-border .form-control:focus {
-    border: 1px solid #ba68c8;
-    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
-}
-
-.green-border-focus .form-control:focus {
-    border: 1px solid #8bc34a;
-    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
-}
-            </style>
 </head>
 <body>
         <div class="container col-12">
