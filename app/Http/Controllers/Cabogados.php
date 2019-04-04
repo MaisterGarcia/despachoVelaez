@@ -1081,5 +1081,28 @@ class Cabogados extends Controller
     }
     public function retraccion(){
     	return view('sistema.pruebadeconjunto');
-    }
+	}
+	//Metodos nuevos
+	public function juicio_N()
+	{
+		$clavequesigue = juicio::orderBy('num_juicio','desc')->take(1)->get();
+			$num_juicios = $clavequesigue[0]->num_juicio+1;
+
+			$tipo_juicios = tipo_juicios::orderBy('NomTipoJuicio','asc')->get();
+
+			$clientes = clientes::orderBy('NomCliente','asc')->get();
+
+			$abogados = abogados::orderBy('NomAbogado','asc')->get();
+
+			$tipo_archivos = tipo_archivos::orderBy('Id_TipoArchivo','asc')->get();
+
+			$juzgados = juzgados::orderBy('FolioJuzgado')->get();
+			return view ('sistema.altaJuicio_N')
+			->with('num_juicios',$num_juicios)
+			->with('tipo_juicios',$tipo_juicios)
+			->with('clientes',$clientes)
+			->with('abogados',$abogados)
+			->with('tipo_archivos',$tipo_archivos)
+			->with('juzgados',$juzgados);
+	}
 }

@@ -106,3 +106,6 @@ route::get('/archivoCliente','Cabogados@archivoCliente')->name('archivoCliente')
 
 Route::POST('/impresion','Cabogados@impresion')->name('impresion');
 Route::get('/retraccion','Cabogados@retraccion')->name('retraccion');
+
+// Rutas para mejora del Sistema
+Route::get('/juicio_N','Cabogados@juicio_N')->name('juicio_N');
