@@ -112,3 +112,4 @@ Route::get('/juicio_N','Cabogados@juicio_N')->name('juicio_N');
 Route::get('/altaJuicio_N', 'Cabogados@altaJuicio_N')->name('altaJuicio_N');
 Route::get('/parametros', 'Cabogados@parametros')->name('parametros');
 Route::get('/buscaJuicio', 'Cabogados@buscaJuicio')->name('buscaJuicio');
+Route::get('/mostrarJuicio', 'Cabogados@mostrarJuicio')->name('mostrarJuicio');

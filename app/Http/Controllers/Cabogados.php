@@ -1193,11 +1193,13 @@ class Cabogados extends Controller
  public function mostrarJuicio(Request $request){
 		$num_juicio = $request->get('juicio'); 
 		$Cliente = $request->get('cliente'); 
+		$Cliente = str_replace(',',' ',$Cliente); 
 		$Actor = $request->get('actor');
+		$Actor = str_replace(',',' ',$Actor); 
 
-		$resultado1=\DB::select("SELECT * FROM juicios_nuevos WHERE CONCAT(NomAbogado,' ', AppAbogado,' ', ApmAbogado) 
-																LIKE '%".trim($Cliente)."%' OR num_juicio like '%".$Cliente."%' OR Dema1 LIKE '%".$Actor."%' 
+		$resultado1=\DB::select("SELECT * FROM juicios_nuevos WHERE NomDemandante
+																LIKE '%".trim($Cliente)."%' OR num_juicio like '%".$num_juicio."%' OR Dema1 LIKE '%".$Actor."%' 
 																OR Dema2 LIKE '%".$Actor."%' OR Dema3 LIKE '%".$Actor."%'");
-		return $resultado1;
+		return view('sistema.devuelveJuicio')->with('resultado1',$resultado1);
  }
 }
