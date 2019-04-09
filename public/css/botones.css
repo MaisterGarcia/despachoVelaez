@@ -28,6 +28,11 @@ border:none;
 width: 48px;
 height: 48px;
 }
+#boton5 { background:url('https://img.icons8.com/color/48/000000/restart.png') no-repeat; 
+    border:none; 
+    width: 48px;
+    height: 48px;
+    }
 .purple-border textarea {
     border: 1px solid #ba68c8;
 }

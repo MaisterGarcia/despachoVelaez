@@ -11,6 +11,7 @@ use App\estados;
 use App\clientes;
 use App\juzgados;
 use App\juicio;
+use App\juicios_nuevos;
 use App\municipios;
 use App\tipo_abogados;
 use App\tipo_archivos;
@@ -566,7 +567,7 @@ class Cabogados extends Controller
 			$this->validate($request,[
 				'num_juicio'=>'required|numeric',
 				'NomDemandante'=>['required','regex:/^[\pL\s\-]+$/u'],
-			'FechaDemanda'=>'required',//[,'regex:/^\d{4}-\d{2}-\d{2}$/'],
+				'FechaDemanda'=>'required',//[,'regex:/^\d{4}-\d{2}-\d{2}$/'],
 			//'FechaAuditoria'=>['required','regex:/^\d{4}-\d{2}-\d{2}$/'],
 			'archivo' => 'mimes:xlsx,pdf,docx,pptx|max:10000'
 
@@ -1085,7 +1086,7 @@ class Cabogados extends Controller
 	//Metodos nuevos
 	public function juicio_N()
 	{
-		$clavequesigue = juicio::orderBy('num_juicio','desc')->take(1)->get();
+		$clavequesigue = juicios_nuevos::orderBy('num_juicio','desc')->take(1)->get();
 			$num_juicios = $clavequesigue[0]->num_juicio+1;
 
 			$tipo_juicios = tipo_juicios::orderBy('NomTipoJuicio','asc')->get();
@@ -1105,4 +1106,98 @@ class Cabogados extends Controller
 			->with('tipo_archivos',$tipo_archivos)
 			->with('juzgados',$juzgados);
 	}
+	public function altaJuicio_N(Request $request){		 
+		  $num_juicio = $request->get('num_juicio'); 
+			$id_TipoJuicio = $request->get('id_TipoJuicio'); 
+			$FechaPresentacion = $request->get('fechaPres');
+			$NomDem = $request->get('nomDem');
+			$NomDem = str_replace(',',' ',$NomDem); 
+			$AppDem = $request->get('appDem');
+			$ApmDem = $request->get('apmDem');
+			$NomDemandante = $NomDem.' '.	$AppDem.' '.$ApmDem;
+			$Abogado1 = $request->get('abogado1');
+			$Abogado1 = str_replace(',',' ',$Abogado1); 
+			$Abogado2 = $request->get('abogado2');
+			if($Abogado2 != "(NULL)"){
+				$Abogado2 = str_replace(',',' ',$Abogado2); 
+				$resultado2=\DB::select("SELECT num_folio FROM abogados WHERE CONCAT(NomAbogado,' ', AppAbogado,' ', ApmAbogado) 
+				LIKE '%".trim($Abogado2)."%' ");
+				$Ab2 = $resultado2[0]->num_folio; 
+			}
+			$Abogado3 = $request->get('abogado3');
+			if($Abogado3 != "(NULL)"){
+				$Abogado3 = str_replace(',',' ',$Abogado3);
+				$resultado3=\DB::select("SELECT num_folio FROM abogados WHERE CONCAT(NomAbogado,' ', AppAbogado,' ', ApmAbogado) 
+				LIKE '%".trim($Abogado3)."%' ");
+				$Ab3 = $resultado3[0]->num_folio; 
+				
+			}
+			$Descripcion = $request->get('descJui');
+			$Descripcion = str_replace(',',' ',$Descripcion); 
+			$Autoridad1 = $request->get('demandado1');
+			$Autoridad1 = str_replace(',',' ',$Autoridad1);
+			$Autoridad2 = $request->get('demandado2');
+			if($Autoridad2 != "(NULL)"){
+				$Autoridad2 = str_replace(',',' ',$Autoridad2); 
+			}
+			$Autoridad3 = $request->get('demandado3');
+			if($Autoridad3 != "(NULL)"){
+				$Autoridad3 = str_replace(',',' ',$Autoridad3); 
+			}
+			$TipoFecha = $request->get('tipFeRa');
+			$FechaCeleb = $request->get('fechaCeleb');
+			$FechaIni = $request->get('fechaIni');
+			$FechaFin = $request->get('fechaFin');
+			$resultado1=\DB::select("SELECT num_folio FROM abogados WHERE CONCAT(NomAbogado,' ', AppAbogado,' ', ApmAbogado) 
+																LIKE '%".trim($Abogado1)."%' ");
+			$Ab1 = $resultado1[0]->num_folio;
+																		
+			 $jui = new juicios_nuevos;
+			$jui->num_juicio = $num_juicio;
+			$jui->fechaPres = $FechaPresentacion;
+			$jui->NomDemandante = $NomDemandante;	
+			$jui->Dema1 = $Autoridad1;
+			$jui->Dema2 = $Autoridad2;
+			$jui->Dema3 = $Autoridad3;
+			$jui->TipoFecha = $TipoFecha;
+			$jui->FechaCeleb = $FechaCeleb;
+			$jui->FechaIni = $FechaIni;
+			$jui->FechaFin = $FechaFin;
+			$jui->id_TipoJuicio = $id_TipoJuicio;
+			$jui->num_folio = $Ab1;
+			if($Abogado2 != "(NULL)"){
+				$jui->num_folio2 = $Ab2;
+			}
+			else{
+				$jui->num_folio2 = $Abogado2;
+			}
+			if($Abogado3 != "(NULL)"){
+				$jui->num_folio3 = $Ab3;
+			}
+			else{
+				$jui->num_folio3 = $Abogado3;
+			}
+			$jui->save();
+	
+			// return $num_juicio.' y '.$id_TipoJuicio.' y '.$FechaPresentacion.' y '.$NomDemandante
+			// 				.' y '.$Abogado1.' y '.$Abogado2.' y '.$Abogado3.' y '.$Descripcion
+			// 				.' y '.$Autoridad1.' y '.$Autoridad2.' y '.$Autoridad3.' y '.$TipoFecha.' y '.$FechaCeleb.' y '.$FechaIni.' y '.$FechaFin;
+		
+			$proceso = "Alta Juicio"; 		 
+			$mensaje = "Juicio Registrado Correctamente";
+		  return view('sistema.mensaje_N')->with('proceso',$proceso)->with('mensaje',$mensaje);
+ }
+ public function buscaJuicio(){
+	return view('sistema.buscaJuicio');		
+ }
+ public function mostrarJuicio(Request $request){
+		$num_juicio = $request->get('juicio'); 
+		$Cliente = $request->get('cliente'); 
+		$Actor = $request->get('actor');
+
+		$resultado1=\DB::select("SELECT * FROM juicios_nuevos WHERE CONCAT(NomAbogado,' ', AppAbogado,' ', ApmAbogado) 
+																LIKE '%".trim($Cliente)."%' OR num_juicio like '%".$Cliente."%' OR Dema1 LIKE '%".$Actor."%' 
+																OR Dema2 LIKE '%".$Actor."%' OR Dema3 LIKE '%".$Actor."%'");
+		return $resultado1;
+ }
 }

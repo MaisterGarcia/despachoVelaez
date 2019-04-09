@@ -28,6 +28,10 @@ $(document).ready(function(){
     var x = 1;
     maxFieldDema = 3;
     var y = 1;
+    $('#datepicker3').hide();
+    $('#datepicker4').hide();
+    $('#fechaIni').hide();
+    $('#fechafin').hide();
     $("#boton1").click(function(){
         if(x < maxField){
             x++;
@@ -66,7 +70,7 @@ $(document).ready(function(){
     $("#boton3").click(function(){
         if(y < maxFieldDema){
             y++;
-            $("#AgregarDe").append("<div id='removeDema'><input type='text' name='deman"+y+"' id='deman"+y+"' class='form-control' placeholder='Autoridad o Demandado ("+y+")'></div>");     
+            $("#AgregarDe").append("<div id='removeDema'><input type='text' name='deman"+y+"' id='deman"+y+"' class='form-control' placeholder='Autoridad o Deman. ("+y+")'></div>");     
         }
     });
     $("#boton4").on('click', function(e){
@@ -74,4 +78,57 @@ $(document).ready(function(){
         $("#removeDema:first").remove();    
             y--;
     });
+    $("input[name='optradio']").click(function(){
+        if($("input[name='optradio']").is(':checked')){
+            $('#datepicker2').hide();
+            $('#celebrada').hide();
+            $("input[name='optradio2']").attr('disabled',true);
+        }
+        if($("input[name='optradio']").is(':checked')){
+            $('#datepicker2').hide();
+            $('#celebrada').hide();
+            $("input[name='optradio2']").attr('disabled',true);
+        }
+    });
+    $("input[name='optradio2']").click(function(){
+        if($("input[name='optradio2']").is(':checked')){
+            $("input[name='optradio']").attr('disabled',true);
+            $("input[name='optradio']").attr('checked',false);
+            $('#datepicker2').hide();
+            $('#celebrada').hide();
+            $('#datepicker3').show();
+            $('#datepicker4').show();
+            $('#fechaIni').show();
+            $('#fechafin').show();
+        }
+    });
+    $("#boton5").on('click', function(e){
+        $('#datepicker2').show();
+        $('#datepicker2').val('');
+        $('#celebrada').show();
+        $("input[name='optradio2']").attr('disabled',false);
+        $("input[name='optradio2']").attr('checked',false);
+        $("input[name='optradio']").attr('disabled',false);
+        $("input[name='optradio']").attr('checked',false);
+        $('#datepicker3').hide();
+        $('#datepicker4').hide();
+        $('#fechaIni').hide();
+        $('#fechafin').hide();
+        $( "#boton6").unbind( "click" );
+    });
+    $( function() {
+        $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
+    }); 
+    $( function() {
+        $( "#datepicker2" ).datepicker({dateFormat: 'dd/mm/yy'});
+    });
+    $( function() {
+        $( "#datepicker3" ).datepicker({dateFormat: 'dd/mm/yy'});
+    });
+    $( function() {
+        $( "#datepicker4" ).datepicker({dateFormat: 'dd/mm/yy'});
+    });
+    
+   
+    
 });
